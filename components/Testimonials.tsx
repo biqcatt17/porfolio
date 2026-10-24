@@ -22,16 +22,16 @@ export default function Testimonials() {
       <div className="section-title">
         <div className="label">Testimonials</div>
         <h2 className="text-2xl font-medium">Kind words from collaborators</h2>
-        <p className="mt-3 text-sm text-emerald-200 max-w-2xl">Feedback from student leaders and teams who worked with me on campus projects and creative media.</p>
+        <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">Feedback from student leaders and teams who worked with me on campus projects and creative media.</p>
       </div>
 
       <div className="mt-6 grid gap-5 xl:grid-cols-3">
         {testimonials.map((item) => (
-          <article key={item.name} className="group rounded-3xl border border-white/10 bg-emerald-950/70 p-6 transition duration-200 ease-out hover:-translate-y-1 hover:border-emerald-400/30 hover:bg-emerald-950/90">
-            <p className="text-lg leading-8 text-emerald-200">“{item.quote}”</p>
+          <article key={item.name} className="group rounded-[1.8rem] border border-[rgba(48,52,59,0.12)] bg-[rgba(255,253,247,0.9)] p-6 transition duration-200 ease-out hover:-translate-y-1 hover:bg-[rgba(220,234,247,0.45)]">
+            <p className="text-lg leading-8 text-[var(--muted)]">“{item.quote}”</p>
             <div className="mt-6 flex flex-col gap-1">
-              <span className="text-sm font-semibold text-white">{item.name}</span>
-              <span className="text-sm text-emerald-300">{item.role}</span>
+              <span className="text-sm font-semibold text-[var(--ink)]">{item.name}</span>
+              <span className="text-sm text-[var(--muted)]">{item.role}</span>
             </div>
           </article>
         ))}

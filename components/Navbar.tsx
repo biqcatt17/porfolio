@@ -24,18 +24,18 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className={`sticky top-0 z-50 border-b backdrop-blur-lg animate-slide-up transition duration-300 ${scrolled ? 'border-white/15 bg-emerald-950/95 shadow-2xl' : 'border-white/10 bg-emerald-950/80'}`}>
+    <header className={`sticky top-0 z-50 border-b backdrop-blur-lg animate-slide-up transition duration-300 ${scrolled ? 'border-[rgba(48,52,59,0.2)] bg-[rgba(250,248,241,0.92)] shadow-[0_10px_30px_rgba(48,52,59,0.05)]' : 'border-[rgba(48,52,59,0.12)] bg-[rgba(250,248,241,0.8)]'}`}>
       <div className="container flex flex-wrap items-center justify-between gap-4 py-4">
-        <a href="#home" className="flex items-center gap-3 text-lg font-semibold text-white transition hover:text-emerald-300 hover:-translate-y-0.5">
-          <span>Chinny Sok</span>
-          <span className="hidden rounded-full bg-emerald-950/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200 md:inline">Finance & Web</span>
+        <a href="#home" className="flex items-center gap-3 text-lg font-semibold text-[var(--ink)] transition hover:-translate-y-0.5">
+          <span className="handwritten text-[2rem] leading-none">Chinny Sok</span>
+          <span className="hidden rounded-full border border-[rgba(48,52,59,0.15)] bg-[rgba(220,234,247,0.8)] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-[var(--ink)] md:inline">Finance & Web</span>
         </a>
 
         <button
           type="button"
           aria-controls="mobile-menu"
           aria-expanded={isOpen}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-emerald-950/70 text-emerald-200 transition hover:border-emerald-400/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-950 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(48,52,59,0.15)] bg-[rgba(255,253,247,0.9)] text-[var(--ink)] transition hover:-translate-y-0.5 hover:bg-[rgba(220,234,247,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(242,139,130,0.35)] md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <span className="sr-only">Toggle navigation</span>
@@ -48,9 +48,9 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-6 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-2 md:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm text-emerald-200 transition duration-200 ease-out hover:text-emerald-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-950">
+            <a key={link.href} href={link.href} className="nav-link">
               {link.label}
             </a>
           ))}
@@ -58,14 +58,14 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div id="mobile-menu" className="border-t border-white/10 bg-emerald-950/90 md:hidden">
+        <div id="mobile-menu" className="border-t border-[rgba(48,52,59,0.12)] bg-[rgba(255,253,247,0.96)] md:hidden">
           <div className="container space-y-2 px-4 py-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block rounded-2xl border border-white/10 bg-emerald-950/80 px-4 py-3 text-sm font-medium text-emerald-200 transition hover:bg-emerald-950 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-950"
+                className="block rounded-2xl border border-[rgba(48,52,59,0.12)] bg-[rgba(255,253,247,0.9)] px-4 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-[rgba(220,234,247,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(242,139,130,0.35)]"
               >
                 {link.label}
               </a>

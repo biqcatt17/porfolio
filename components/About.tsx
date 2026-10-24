@@ -14,24 +14,24 @@ export default function About() {
             <div className="label">About me</div>
             <h2 className="mt-4 text-2xl font-medium">About</h2>
           </div>
-          <p className="mt-4 text-emerald-200">I’m Chinny Sok — an IT and Engineering graduate who blends finance, web development, and creative production to support students, events, and small organizations. I combine technical skills with practical media and data work to deliver polished results.</p>
+          <p className="mt-4 text-[var(--muted)]">I am a multidisciplinary digital professional with a focus on finance, web, and media, creating refined digital experiences that connect strategy, design, and technology. My work is built on thoughtful execution, clear communication, and a strong understanding of how digital platforms can support business goals and audience engagement.</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-3xl border border-white/10 bg-emerald-950/60 p-5 transition hover:border-emerald-400/30 hover:bg-emerald-950/80">
-              <h3 className="text-sm font-semibold text-white">What I build</h3>
-              <p className="mt-3 text-sm text-emerald-200">Web apps, media assets, and student-facing digital experiences.</p>
+            <div className="rounded-[1.6rem] border border-[rgba(48,52,59,0.12)] bg-[rgba(255,253,247,0.9)] p-5 transition hover:-translate-y-0.5 hover:bg-[rgba(220,234,247,0.6)]">
+              <h3 className="text-sm font-semibold text-[var(--ink)]">What I build</h3>
+              <p className="mt-3 text-sm text-[var(--muted)]">Digital experiences, branded platforms, and practical solutions designed for clarity, usability, and business value.</p>
             </div>
-            <div className="rounded-3xl border border-white/10 bg-emerald-950/60 p-5 transition hover:border-amber-400/30 hover:bg-emerald-950/80">
-              <h3 className="text-sm font-semibold text-white">What I bring</h3>
-              <p className="mt-3 text-sm text-emerald-200">Technical attention, creative teamwork, and reliable delivery.</p>
+            <div className="rounded-[1.6rem] border border-[rgba(48,52,59,0.12)] bg-[rgba(248,231,161,0.24)] p-5 transition hover:-translate-y-0.5 hover:bg-[rgba(248,231,161,0.32)]">
+              <h3 className="text-sm font-semibold text-[var(--ink)]">What I bring</h3>
+              <p className="mt-3 text-sm text-[var(--muted)]">Strategic thinking, polished execution, technical discipline, and a consistent focus on measurable outcomes.</p>
             </div>
           </div>
         </div>
 
-        <aside className="space-y-4 rounded-3xl border border-white/10 bg-emerald-950/60 p-5">
+        <aside className="space-y-4 rounded-[1.8rem] border border-[rgba(48,52,59,0.12)] bg-[rgba(255,253,247,0.9)] p-5">
           {details.map((item) => (
-            <div key={item.label} className="rounded-2xl border border-white/10 bg-emerald-950/40 p-4">
-              <p className="text-sm text-emerald-200">{item.label}</p>
-              <p className="mt-1 text-sm font-medium text-white">{item.value}</p>
+            <div key={item.label} className="rounded-[1.2rem] border border-[rgba(48,52,59,0.12)] bg-[rgba(220,234,247,0.33)] p-4">
+              <p className="text-sm text-[var(--muted)]">{item.label}</p>
+              <p className="mt-1 text-sm font-medium text-[var(--ink)]">{item.value}</p>
             </div>
           ))}
         </aside>
